@@ -156,8 +156,8 @@ def delete_research_project():
     print("\nResearch project deleted successfully!")
     
 
-# create_research_project()
-# view_research_projects()
-# search_research_projects()
-# edit_research_project()
+create_research_project()
+view_research_projects()
+search_research_projects()
+edit_research_project()
 delete_research_project()
