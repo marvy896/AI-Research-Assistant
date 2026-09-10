@@ -52,6 +52,7 @@ def view_research_projects():
         print(f"\n Project Title: {project[1]}")
         print(f"\n Project Topic: {project[2]}")
         print(f"\n Created on: {project[3]}")
+        
 def search_research_projects():
     print("\n ------ Result of Research Projects Search ------")  
     search_term = input("Enter search term (title or topic): ").strip()
@@ -156,8 +157,42 @@ def delete_research_project():
     print("\nResearch project deleted successfully!")
     
 
-create_research_project()
-view_research_projects()
-search_research_projects()
-edit_research_project()
-delete_research_project()
+def main():
+    while True:
+        print("\n" + "=" * 50)
+        print("           AI RESEARCH ASSISTANT")
+        print("=" * 50)
+
+        print("1. Create Research Project")
+        print("2. View Research Projects")
+        print("3. Search Research Projects")
+        print("4. Edit Research Project")
+        print("5. Delete Research Project")
+        print("6. Exit")
+
+        choice = input("\nEnter your choice: ").strip()
+
+        if choice == "1":
+            create_research_project()
+
+        elif choice == "2":
+            view_research_projects()
+
+        elif choice == "3":
+            search_research_projects()
+
+        elif choice == "4":
+            edit_research_project()
+
+        elif choice == "5":
+            delete_research_project()
+
+        elif choice == "6":
+            print("\nThank you for using AI Research Assistant!")
+            break
+
+        else:
+            print("\nInvalid choice. Please select 1-6.")
+        
+if __name__ == "__main__":
+    main()
